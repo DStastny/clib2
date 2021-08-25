@@ -59,31 +59,127 @@
 /****************************************************************************/
 
 /* Common for all supported compilers. */
+#ifdef __INT8_TYPE__
+typedef	__INT8_TYPE__ int8_t;
+#else
+typedef	signed char int8_t;
+#endif
 
-typedef	signed char				int8_t;
-typedef	signed short			int16_t;
-typedef	signed int				int32_t;
-typedef	unsigned char			uint8_t;
-typedef	unsigned short			uint16_t;
-typedef	unsigned int			uint32_t;
+#ifdef __INT16_TYPE__
+typedef	__INT16_TYPE__ int16_t;
+#else
+typedef	signed short int16_t;
+#endif
 
-typedef	signed char				int_least8_t;
-typedef	signed short			int_least16_t;
-typedef	signed int				int_least32_t;
-typedef	unsigned char			uint_least8_t;
-typedef	unsigned short			uint_least16_t;
-typedef	unsigned int			uint_least32_t;
+#ifdef __INT32_TYPE__
+typedef	__INT32_TYPE__ int32_t;
+#else
+typedef	signed int int32_t;
+#endif
 
-/* This is mostly guesswork. */
-typedef	signed char				int_fast8_t;
-typedef	signed int				int_fast16_t;
-typedef	signed int				int_fast32_t;
-typedef	unsigned char			uint_fast8_t;
-typedef	unsigned int			uint_fast16_t;
-typedef	unsigned int			uint_fast32_t;
+#ifdef __UINT8_TYPE__ 
+typedef	__UINT8_TYPE__ uint8_t;
+#else
+typedef	unsigned char uint8_t;
+#endif
 
-typedef	signed long				intptr_t;
-typedef	unsigned long			uintptr_t;
+#ifdef __UINT16_TYPE__
+typedef	__UINT16_TYPE__ uint16_t;
+#else
+typedef	unsigned short uint16_t;
+#endif
+
+#ifdef __UINT32_TYPE__
+typedef	__UINT32_TYPE__ uint32_t;
+#else
+typedef	unsigned int uint32_t;
+#endif
+
+#ifdef __INT_LEAST8_TYPE__
+typedef	__INT_LEAST8_TYPE__ int_least8_t;
+#else
+typedef	signed char int_least8_t;
+#endif
+
+#ifdef __INT_LEAST16_TYPE__
+typedef	__INT_LEAST16_TYPE__ int_least16_t;
+#else
+typedef	signed short int_least16_t;
+#endif
+
+#ifdef __INT_LEAST32_TYPE__
+typedef	__INT_LEAST32_TYPE__ int_least32_t;
+#else
+typedef	signed int int_least32_t;
+#endif
+
+#ifdef __UINT_LEAST8_TYPE__
+typedef	__UINT_LEAST8_TYPE__ uint_least8_t;
+#else
+typedef	unsigned char uint_least8_t;
+#endif
+
+#ifdef __UINT_LEAST16_TYPE__
+typedef	__UINT_LEAST16_TYPE__ uint_least16_t;
+#else
+typedef	unsigned short uint_least16_t;
+#endif
+
+#ifdef __UINT_LEAST32_TYPE__
+typedef	__UINT_LEAST32_TYPE__ uint_least32_t;
+#else
+typedef	unsigned int uint_least32_t;
+#endif __UINT_LEAST16_TYPE__
+
+#ifdef __INT_FAST8_TYPE__
+typedef	__INT_FAST8_TYPE__ int_fast8_t;
+#else
+typedef	signed char int_fast8_t;
+#endif
+
+#ifdef __INT_FAST16_TYPE__
+typedef	__INT_FAST16_TYPE__ int_fast16_t;
+#else
+typedef	signed int int_fast16_t;
+#endif
+
+#ifdef __INT_FAST32_TYPE__
+typedef	signed __INT_FAST32_TYPE__ int_fast32_t;
+#else
+typedef	signed int int_fast32_t;
+#endif
+
+#ifdef __UINT_FAST8_TYPE__
+typedef	__UINT_FAST8_TYPE__ uint_fast8_t;
+#else 
+typedef	unsigned char uint_fast8_t;
+#endif
+
+#ifdef __UINT_FAST16_TYPE__
+typedef	__UINT_FAST16_TYPE__ uint_fast16_t;
+#else
+typedef	unsigned int uint_fast16_t;
+#endif
+
+#ifdef __UINT_FAST32_TYPE__
+typedef	__UINT_FAST32_TYPE__ uint_fast32_t;
+#else
+typedef	unsigned int uint_fast32_t;
+#endif
+
+#if defined(__INTPTR_TYPE__)
+typedef __INTPTR_TYPE__ intptr_t;
+#else
+typedef signed long intptr_t;
+#endif
+
+#if defined(__UINTPTR_TYPE__)
+typedef __UINTPTR_TYPE__ uintptr_t;
+#else
+typedef unsigned long uintptr_t;
+#endif
+
+
 
 #if defined(__GNUC__) || (defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L))
 typedef	signed long long		int64_t;
