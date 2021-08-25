@@ -129,7 +129,7 @@ typedef	unsigned short uint_least16_t;
 typedef	__UINT_LEAST32_TYPE__ uint_least32_t;
 #else
 typedef	unsigned int uint_least32_t;
-#endif __UINT_LEAST16_TYPE__
+#endif 
 
 #ifdef __INT_FAST8_TYPE__
 typedef	__INT_FAST8_TYPE__ int_fast8_t;
