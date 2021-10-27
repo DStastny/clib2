@@ -3,3 +3,5 @@
 /library/compiler.log
 /library/netinclude
 *.map
+.vscode/settings.json
+/library/clib2-1.215/*
